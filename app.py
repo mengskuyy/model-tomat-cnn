@@ -11,7 +11,7 @@ st.write("Upload gambar daun tomat, dan model akan memprediksi penyakitnya mengg
 @st.cache_resource
 def load_model():
     try:
-        model = tf.keras.models.load_model('model.keras')
+        model = tf.keras.models.load_model('model.h5')
         with open("labels.txt", "r") as f:
             class_names = [line.strip() for line in f.readlines()]
         return model, class_names
